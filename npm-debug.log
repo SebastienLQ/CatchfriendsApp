@@ -1,0 +1,29 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/opt/node/bin/node',
+1 verbose cli   '/opt/node/bin/npm',
+1 verbose cli   'completion',
+1 verbose cli   '--',
+1 verbose cli   'npm',
+1 verbose cli   'install',
+1 verbose cli   '--save-dev',
+1 verbose cli   'socket.' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose registry.get https://registry.npmjs.org/-/short not expired, no request
+5 error TypeError: Object #<Object> has no method 'filter'
+5 error     at /opt/node/lib/node_modules/npm/lib/install.js:43:17
+5 error     at RegClient.get_ (/opt/node/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:130:14)
+5 error     at RegClient.<anonymous> (/opt/node/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:49:12)
+5 error     at evalmachine.<anonymous>:271:14
+5 error     at /opt/node/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:102:5
+5 error     at Object.oncomplete (evalmachine.<anonymous>:107:15)
+6 error If you need help, you may report this *entire* log,
+6 error including the npm and node versions, at:
+6 error     <http://github.com/npm/npm/issues>
+7 error System Linux 3.13.0-63-generic
+8 error command "/opt/node/bin/node" "/opt/node/bin/npm" "completion" "--" "npm" "install" "--save-dev" "socket."
+9 error cwd /media/maju/6bdea74c-6809-4f2f-9cf9-fbf242699700/toto/HTML/Maju/lequer_s/CatchFriendsHtml
+10 error node -v v0.10.32
+11 error npm -v 1.4.28
+12 error type undefined_method
+13 verbose exit [ 1, true ]

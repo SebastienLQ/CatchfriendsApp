@@ -1,0 +1,15 @@
+<section class="friends padding">
+	<div id="affFriends" class="list">
+		<div class="item item-thumbnail-left friend" ng-repeat="friend in friends" >
+			<img ng-src="{{friend.avatar}}">
+			<h2>{{friend.pseudo}}</h2>
+			<p>{{friend.description}}</p>
+			<div class='row'>
+				<button ng-click="goToChat(friend.pseudo)" class='button button-positive col col-50 col-offset-50 game-access'>Chat</button>
+			</div>
+		</div>
+		<div class="" ng-if="friends.length == 0">
+			<p>Pas encore d'amis ...</p>
+		</div>
+	</div>
+</section>

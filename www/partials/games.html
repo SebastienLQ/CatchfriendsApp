@@ -1,0 +1,13 @@
+<section class="tags padding">
+	<div id="affGames" class="list card">
+		<div class='item item-thumbnail-left' ng-repeat="game in games">
+			<img ng-src="{{game.avatar}}"/>
+			<h2>{{game.pseudo}}</h2>
+			<p>{{game.description}}</p>
+			<h2 class='badge'>{{game.turn}}</h2>
+			<div class='row'>
+				<button ng-click="goToGame(game.pseudo)" class='button button-positive col col-50 col-offset-50 game-access'>Accéder</button>
+			</div>
+		</div>
+	</div>
+</section>

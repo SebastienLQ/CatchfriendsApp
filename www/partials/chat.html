@@ -1,0 +1,28 @@
+<section class="chat padding" >
+	<div class="list">
+		<div id=""  class="chat-items" ng-repeat="message in messages">
+			<div class="item" ng-if="pseudo === message.fromProfile">
+				<div class="chat-bubble right">
+					<p>{{message.messageSend}}</p>
+				</div>
+			</div>
+			<div class="item" ng-if="pseudo !== message.fromProfile">
+				<div class="chat-bubble left">
+					<p class="m">{{message.messageSend}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<form id="myForm" style="width: 100%;" name="sendMessageForm" ng-submit="sendMessage(sendMessageForm)" novalidate>
+		<div class="bar-stable item-input-inset message-footer" keyboard-attach>
+			<label class="item-input-wrapper">
+				<textarea id="msg" ng-model="myInput" value="" placeholder="Send a message to {{friend}} ..." required minlength="1" maxlength="1500" msd-elastic></textarea>
+			</label>
+			<div class="footer-btn-wrap">
+				<button id="send" class="button button-icon icon ion-chevron-right footer-btn" type="submit"
+					 style="color: #387EF5;">
+				</button>
+			</div>
+		</div>
+	</form>
+</section>

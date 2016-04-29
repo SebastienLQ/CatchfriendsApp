@@ -1,0 +1,27 @@
+<section class="login padding">
+	<form>
+		<div class="list">
+			<label class="item item-input">
+				<span class="input-label">Pseudo
+					<!-- <i class="icon ion-flag placeholder-icon"></i> -->
+				</span>
+				<input type="text" id="pseudo" ng-model="pseudo" required/>
+			</label>
+			<label class="item item-input">
+				<span class="input-label">Description
+					<!-- <i class="icon ion-bookmark placeholder-icon"></i> -->
+				</span>
+				<input type="text" id="description" ng-model="description"/>
+			</label>
+			<label class="item item-input">
+				<span class="input-label">Pourcentage de Compatibilité
+					<!-- <i class="icon ion-bookmark placeholder-icon"></i> -->
+				</span>
+				<input type="number" id="pourcentage" ng-model="pourcentage" min="25" max="100"/>
+			</label>
+		</div>
+		<div class="padding">
+			<input class="button button-block button-positive" ng-click="" value="Mettre à jour" type="submit" />
+		</div>
+	</form>
+</section>

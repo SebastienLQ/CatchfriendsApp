@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<title>CatchFriends</title>
+
+		<link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
+		<link rel="stylesheet" type="text/css" href="lib/ionic/css/ionic.min.css">
+		<link rel="stylesheet" type="text/css" href="css/tooltipster.css">
+		<link rel="stylesheet" type="text/css" href="css/catchfriends.css">
+		<!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+		<link href="css/ionic.app.css" rel="stylesheet">-->
+
+		<!-- ionic/angularjs js -->
+		<script src="lib/ionic/js/ionic.bundle.min.js"></script>
+		<script src="lib/ionic/js/ionic.min.js"></script>
+		<script src="lib/ionic/js/ionic-angular.min.js"></script>
+		<script src="lib/ionic/js/angular/ng-cordova.min.js"></script>
+
+		<!-- cordova script (this will be a 404 during development) -->
+		<script src="cordova.js"></script>
+
+		<!-- your app's js -->
+		<script type="text/javascript" src="js/vendor/jquery-2.1.1.min.js"></script>
+		<!-- <script type="text/javascript" src="js/vendor/jquery.cookie.js"></script> -->
+		<!-- <script type="text/javascript" src="js/vendor/angular.min.js"></script> -->
+		<script type="text/javascript" src="js/vendor/angular-route.min.js"></script>
+		<script type="text/javascript" src="js/vendor/jquery.tooltipster.min.js"></script>
+
+		<script type="text/javascript" src="js/vendor/socket.io-1.3.5.min.js"></script>
+		<script type="text/javascript" src="lib/angular-socket-io/socket.js"></script>
+
+		<script type="text/javascript" src="js/constantes.js"></script>
+		<script type="text/javascript" src="js/functions.js"></script>
+		<script type="text/javascript" src="js/CatchFriends.js"></script>
+		<script type="text/javascript" src="js/controllers/LoginController.js"></script>
+		<script type="text/javascript" src="js/controllers/CreateAccountController.js"></script>
+		<script type="text/javascript" src="js/controllers/CreateProfileController.js"></script>
+		<script type="text/javascript" src="js/controllers/LogoutController.js"></script>
+		<script type="text/javascript" src="js/controllers/HomeController.js"></script>
+		<script type="text/javascript" src="js/controllers/ProfilController.js"></script>
+		<script type="text/javascript" src="js/controllers/CurrentProfileController.js"></script>
+		<script type="text/javascript" src="js/controllers/UpdateProfileController.js"></script>
+		<script type="text/javascript" src="js/controllers/ThemesController.js"></script>
+		<script type="text/javascript" src="js/controllers/CategoriesController.js"></script>
+		<script type="text/javascript" src="js/controllers/TagsController.js"></script>
+		<script type="text/javascript" src="js/controllers/CheckinController.js"></script>
+		<script type="text/javascript" src="js/controllers/GamesController.js"></script>
+		<script type="text/javascript" src="js/controllers/GameController.js"></script>
+		<script type="text/javascript" src="js/controllers/AskQuestionController.js"></script>
+		<script type="text/javascript" src="js/controllers/FriendsControllers.js"></script>
+		<script type="text/javascript" src="js/controllers/ChatController.js"></script>
+
+
+		<!-- Google Map -->
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyCsWVjwQ2QmHOHahLPiBlWdTo3zdufjqW8"></script>
+	</head>
+
+	<body ng-app="CatchFriends">
+		<ion-pane>
+			<ion-header-bar align-title="center" class="bar-positive">
+				<div id="backButton" class="buttons" ng-show="backButton">
+					<button class="button button-clear icon-left ion-arrow-left-c" ng-click="back()"></button>
+				</div>
+
+				<h1 id="headerTitle" class="title">CatchFriends</h1>
+
+				<div id="logoutButton" class="buttons" ng-show="user !== undefined">
+					<button class="button button-clear icon-right ion-log-out" ng-click="logout()"></button>
+				</div>
+
+			</ion-header-bar>
+
+			<ion-content>
+				<!-- <div class="loading-spiner-holder" data-loading ><div class="loading-spiner"><i class="icon ion-loading-c"></i></div></div> -->
+				<div class="app" ng-view>
+
+				</div>
+			</ion-content>
+
+			<!-- Google Map -->
+
+
+			<!-- A voir le css pour add class "active" lorsque il est clicked et suppr les autres classe actives des autres a -->
+			<ion-footer-bar class="">
+				<!-- <button class="button icon-left ion-chevron-left button-clear" ng-click="back()">Retour</button> -->
+				<!--  onclick="window.location.replace('#/home')" -->
+				<div id="pageFooter" class="tabs-striped tabs-color-positive" ng-show="user != undefined">
+					<div class="tabs">
+						<a id="footerHome" class="footerButton tab-item" onclick="window.location.replace('#/home');">
+							<i class="icon ion-home"></i>
+						</a>
+						<a id="footerGames" class="footerButton tab-item" onclick="window.location.replace('#/games');">
+							<i class="icon ion-chatboxes"></i>
+						</a>
+						<a id="footerCheck" class="footerButton tab-item" onclick="window.location.replace('#/checkin');">
+							<i class="icon ion-location"></i>
+						</a>
+						<a id="footerProfil" class="footerButton tab-item" onclick="window.location.replace('#/profil');">
+							<i class="icon ion-person"></i>
+						</a>
+						<a id="footerFriends" class="footerButton tab-item" onclick="window.location.replace('#/friends');">
+							<i class="icon ion-person-stalker"></i>
+						</a>
+					</div>
+				</div>
+			</ion-footer-bar>
+		</ion-pane>
+	</body>
+</html>

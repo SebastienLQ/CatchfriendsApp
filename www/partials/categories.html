@@ -1,0 +1,9 @@
+<section class="categories padding">
+	<div class="padding">
+		<button id="sendTagsToServer" class="button button-block button-full" ng-click="sendTagsToServer()">Envoyer les nouveaux tags</button>
+	</div>
+	
+	<div id="affCategories">
+		<button ng-repeat="category in categories" class="button button-full icon-right myButton" ng-class="[category.color, category.icon]" theme="{{category.theme}}" category="{{category.category}}" ng-click="goToCategory(category.theme, category.category)">{{category.category}}</button>
+	</div>
+</section>

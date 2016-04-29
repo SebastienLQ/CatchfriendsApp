@@ -1,0 +1,22 @@
+<section class="tags padding">
+	<div class="padding"></div>
+
+	<div id="affGame">
+		<h2>Partie avec {{ pseudoChallenger }}</h2>
+		<p>Nombre de questions restantes à ce tour : {{game.turn}}</p>
+		<p>Date de début : {{game.startDate}}</p>
+		<p>Dernière question : {{game.lastDate}}</p>
+		<ul class='list'>
+			<li ng-repeat="question in game.questions" class="item item-avatar tooltip" ng-class="{'myQuestion': question.yourself, 'challengerQuestion': !question.yourself}" title="{{question.profile}}, {{question.date}}" tag="{{question.tag}}">
+				<img ng-src="{{question.profileAvatar}}" />
+				<p class="white-text padding" ng-class="question.color">{{question.tag}}</p>
+				<span class="item-note padding noteAnswer" ng-class="{'balanced': question.answer, 'assertive': !question.answer}">{{question.answerText}}</span>
+			</li>
+		</ul>
+	</div>
+
+	<div class="padding">
+		<button id="askQuestionButton" class="button button-block button-stable button-full" ng-show="game.turn > 0" ng-click="askQuestion()">Poser une question</button>
+		<button id="addFriendButton" class="button button-block button-balanced button-full" ng-show="game.canBeFriends" ng-click="addFriend()">Ajouter un ami</button>
+	</div>
+</section>

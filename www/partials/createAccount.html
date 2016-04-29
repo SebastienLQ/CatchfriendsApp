@@ -1,0 +1,26 @@
+<section class="create padding">
+<form >
+	<div class="list ">
+		<label class="item item-input item-floating-label">
+			<span class="input-label">Login</span>
+			<input id="login" name="login" type="text" placeholder="Login" ng-model="login"/>
+		</label>
+		<label class="item item-input item-floating-label">
+			<span class="input-label">Email</span>
+			<input id="email" name="email" type="email" placeholder="Email" ng-model="email"/>
+		</label>
+		<label class="item item-input item-floating-label">
+			<span class="input-label">Mot de passe</span>
+			<input id="password" name="password" type="password" placeholder="Mot de passe" />
+		</label>
+		<label class="item item-input item-floating-label">
+			<span class="input-label">Confirmez le mot de passe</span>
+			<input id="confirmPassword" name="confirmPassword" type="password" placeholder="Comfirmation" onpaste="return false;" ng-model="password"/>
+		</label>
+	</div>
+	<div class="padding">
+		<input class="button button-block button-balanced" value="Envoyer" type="submit"></input>
+		<button class="button button-block button-assertive" type="button" ng-click="cancelCreation()">Cancel</button>
+	</div>
+</form>
+</section>

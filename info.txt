@@ -1,0 +1,24 @@
+Node version: v0.10.34
+
+Cordova version: 4.1.2
+
+Config.xml file: 
+
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.socialsafestudio.catchfriends" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>CatchFriends</name>
+    <description>
+		Super CatchFriends
+    </description>
+    <author href="http://www.etna-alternance.net">
+        SocialSafeStudio
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>
+
+
+No Plugins Currently Installed
+
+No Platforms Currently Installed
+

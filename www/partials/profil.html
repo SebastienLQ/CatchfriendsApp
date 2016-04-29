@@ -1,0 +1,26 @@
+<section class="profil padding">
+	<div class="list">
+		<div class="item item-thumbnail-left">
+			<img ng-src="{{avatar}}"/>
+			<h2>{{pseudo}}</h2>
+			<p>{{description}}</p>
+			<p>Compatibilité recherchée : {{pourcentage}}%</p>
+		</div>
+	</div>
+	<div id="affProfil" class="list">
+		<button class=" item item-icon-left button button-full button-light" onclick="window.location.replace('#/themes')">
+			<i class="icon ion-edit"></i>
+			Modifier les TIs
+		</button>
+
+		<button class=" item item-icon-left button button-full button-light" onclick="window.location.replace('#/currentprofile')">
+			<i class="icon ion-eye"></i>
+			Afficher les TIs
+		</button>
+
+		<button class=" item item-icon-left button button-full button-light" onclick="window.location.replace('#/updateprofile')">
+			<i class="icon ion-wrench"></i>
+			Modifier mon profil
+		</button>
+	</div>
+</section>
